@@ -3,127 +3,277 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Métodos de Pago</title>
+<title>Métodos de Pago - Dinámica</title>
 
 <style>
 body{
-    font-family:  Arial, sans-serif;
-    background:#f5f5f5;
     margin:0;
     padding:20px;
+    background:#f5f5f5;
+    font-family:Arial,sans-serif;
 }
 
 .container{
-    max-width:500px;
+    max-width:1200px;
     margin:auto;
-    background:#fff;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,.1);
 }
 
 .logo{
     text-align:center;
-    margin-bottom:25px;
+    margin-bottom:30px;
 }
 
 .logo img{
-    max-width:180px;
+    max-width:320px;
+    width:100%;
 }
 
 h1{
     text-align:center;
-    color:#d32f2f;
+    color:#d40000;
+    margin-bottom:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
 }
 
 .card{
-    background:#fafafa;
-    border:1px solid #eee;
-    border-radius:10px;
-    padding:15px;
-    margin-bottom:15px;
+    background:#fff;
+    border:1px solid #e2e2e2;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.card h2{
+    text-align:center;
+    margin-top:10px;
+}
+
+.bank-logo{
+    display:block;
+    margin:auto;
+    max-height:70px;
+    max-width:220px;
+}
+
+.section{
+    margin-top:18px;
+    padding-top:10px;
+    border-top:1px solid #eee;
 }
 
 .numero{
-    font-size:20px;
-    font-weight:bold;
-    margin-bottom:10px;
+    font-size:18px;
+    margin:10px 0;
+    word-break:break-word;
 }
 
 button{
     width:100%;
-    background:#d32f2f;
+    background:#d40000;
     color:#fff;
     border:none;
+    border-radius:30px;
     padding:12px;
-    border-radius:8px;
     cursor:pointer;
-    font-size:15px;
+    font-weight:bold;
+    margin-top:8px;
 }
 
 button:hover{
-    opacity:.9;
+    background:#b50000;
 }
 
-.mensaje{
+.qr{
+    display:block;
+    margin:15px auto;
+    width:220px;
+    max-width:100%;
+}
+
+.toast{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#0f9d58;
+    color:white;
+    padding:12px 20px;
+    border-radius:8px;
+    display:none;
+    z-index:999;
+}
+
+.center{
     text-align:center;
-    color:green;
-    margin-top:15px;
-    font-weight:bold;
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <div class="container">
 
-    <div class="logo">
-        <!-- Reemplaza por tu logo -->
-        <img src="logo.png" alt="Logo">
-    </div>
+<div class="logo">
+<img src="DINAMICA LOGO.png" alt="Dinámica">
+</div>
 
-    <h1>Métodos de Pago</h1>
+<h1>Métodos de Pago</h1>
 
-    <div class="card">
-        <p><strong>Yape</strong></p>
-        <div class="numero">987 654 321</div>
-        <button onclick="copiarTexto('987654321')">
-            Copiar número
-        </button>
-    </div>
+<div class="grid">
 
-    <div class="card">
-        <p><strong>CCI</strong></p>
-        <div class="numero">00212345678912345678</div>
-        <button onclick="copiarTexto('00212345678912345678')">
-            Copiar CCI
-        </button>
-    </div>
+<!-- BCP -->
+<div class="card">
 
-    <div class="card">
-        <a href="https://wa.me/51987654321">
-            <button>
-                WhatsApp
-            </button>
-        </a>
-    </div>
+<img src="BCP.png" class="bank-logo">
 
-    <div id="mensaje" class="mensaje"></div>
+<h2>Transferencia BCP</h2>
+
+<p><strong>Titular:</strong><br>
+Dinamica Implementos & Pecas SAC</p>
+
+<div class="section">
+<strong>Cuenta Soles</strong>
+<div class="numero">193-9861988-0-37</div>
+<button onclick="copiarTexto('193-9861988-0-37')">
+Copiar cuenta
+</button>
+</div>
+
+<div class="section">
+<strong>CCI Soles</strong>
+<div class="numero">00219300986198803714</div>
+<button onclick="copiarTexto('00219300986198803714')">
+Copiar CCI
+</button>
+</div>
+
+<div class="section">
+<strong>Cuenta Dólares</strong>
+<div class="numero">193-9852332-1-13</div>
+<button onclick="copiarTexto('193-9852332-1-13')">
+Copiar cuenta
+</button>
+</div>
+
+<div class="section">
+<strong>CCI Dólares</strong>
+<div class="numero">00219300985233211315</div>
+<button onclick="copiarTexto('00219300985233211315')">
+Copiar CCI
+</button>
+</div>
 
 </div>
 
+<!-- BBVA -->
+<div class="card">
+
+<img src="BBVA.svg" class="bank-logo">
+
+<h2>Transferencia BBVA</h2>
+
+<p><strong>Titular:</strong><br>
+Dinamica Implementos & Pecas SAC</p>
+
+<div class="section">
+<strong>Cuenta Soles</strong>
+<div class="numero">0011-0357-02-00475005</div>
+<button onclick="copiarTexto('0011-0357-02-00475005')">
+Copiar cuenta
+</button>
+</div>
+
+<div class="section">
+<strong>CCI Soles</strong>
+<div class="numero">011357000020047500511</div>
+<button onclick="copiarTexto('011357000020047500511')">
+Copiar CCI
+</button>
+</div>
+
+<div class="section">
+<strong>Cuenta Dólares</strong>
+<div class="numero">0011-0357-02-00475013</div>
+<button onclick="copiarTexto('0011-0357-02-00475013')">
+Copiar cuenta
+</button>
+</div>
+
+<div class="section">
+<strong>CCI Dólares</strong>
+<div class="numero">01135700020047501315</div>
+<button onclick="copiarTexto('01135700020047501315')">
+Copiar CCI
+</button>
+</div>
+
+</div>
+
+<!-- YAPE -->
+<div class="card center">
+
+<img src="YAPEE.png" class="bank-logo">
+
+<h2>Pago con Yape</h2>
+
+<img src="YAPE LOGO.jpeg" class="qr">
+
+<p><strong>Titular:</strong><br>
+Dinamica Implementos & Pecas SAC</p>
+
+<div class="numero">+51 960 703 430</div>
+
+<button onclick="copiarTexto('+51960703430')">
+Copiar número
+</button>
+
+</div>
+
+<!-- PLIN -->
+<div class="card center">
+
+<img src="PLIN.webp" class="bank-logo">
+
+<h2>Pago con Plin</h2>
+
+<img src="PLIN.png" class="qr">
+
+<p><strong>Titular:</strong><br>
+Dinamica Implementos & Pecas SAC</p>
+
+<div class="numero">+51 960 703 430</div>
+
+<button onclick="copiarTexto('+51960703430')">
+Copiar número
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="toast" class="toast">
+✅ Información copiada correctamente
+</div>
+
 <script>
-function copiarTexto(texto) {
+function copiarTexto(texto){
 
-    navigator.clipboard.writeText(texto);
+navigator.clipboard.writeText(texto);
 
-    document.getElementById("mensaje").innerHTML =
-    "✅ Información copiada correctamente";
+const toast=document.getElementById('toast');
+toast.style.display='block';
 
-    setTimeout(() => {
-        document.getElementById("mensaje").innerHTML = "";
-    }, 2500);
+setTimeout(()=>{
+toast.style.display='none';
+},2000);
+
 }
 </script>
 
