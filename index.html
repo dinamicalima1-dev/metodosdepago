@@ -32,11 +32,18 @@ h1{
     text-align:center;
     color:#d40000;
     margin-bottom:30px;
+}
+
 .grid{
     display:grid;
-grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr 1fr;
     gap:25px;
 }
+
+@media (max-width:768px){
+    .grid{
+        grid-template-columns:1fr;
+    }
 }
 
 .card{
@@ -190,7 +197,7 @@ Copiar cuenta
 <div class="section">
 <strong>CCI Soles</strong>
 <div class="numero">01135700020047500511</div>
-<button onclick="copiarTexto('011357000020047500511')">
+<button onclick="copiarTexto('01135700020047500511')">
 Copiar CCI
 </button>
 </div>
